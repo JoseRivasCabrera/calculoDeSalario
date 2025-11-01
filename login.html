@@ -1,35 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Google Login Test</title>
+  </head>
+  <body>
+    <h2>Prueba de inicio de sesión con Google</h2>
+    <div id="buttonDiv"></div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio de sesion</title>
-  <link rel="stylesheet" href="public/styles/login.css">
-</head>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      function handleCredentialResponse(response) {
+        console.log("Token recibido:", response.credential);
+        alert("Login exitoso. Revisa la consola del navegador.");
+      }
 
-<header>
+      window.onload = function() {
+        google.accounts.id.initialize({
+          client_id: "358858690615-vmfeph3nr3kq9kquadh92qj8uev72rk0.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+        });
 
-</header>
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          { theme: "outline", size: "large" }
+        );
 
-<body>
-  <div class="login-container">
-    <div class="login-card">
-      <h1>Control de Movimientos</h1>
-      <p>Inicia sesión con tu cuenta de Google</p>
-      <button id="googleLoginBtn" class="google-btn">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
-        Iniciar sesión con Google
-      </button>
-    </div>
-  </div>
-</body>
-<footer>
-
-</footer>
-
-<script src="public/javascript/login.js"></script>
-
-</body>
-
+        google.accounts.id.prompt();
+      };
+    </script>
+  </body>
 </html>
