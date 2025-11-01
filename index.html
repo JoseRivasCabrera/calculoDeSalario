@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de salario</title>
+  <link rel="stylesheet" href="public/styles/index.css">
+</head>
+
+<main>
+
+  <header>
+  
+
+  </header>
+
+  <body>
+    
+    <div class="container" id="container">
+      <a href="login.html" class="btn-login">login</a>
+      <h1>Cálculo de salario</h1>
+      <div id="formulario">
+          <label for="diurno">Guardias Diurnas:</label>
+          <input type="number" id="diurno" min="0" placeholder="Ingrese días diurnos"><label for="mixto">Guardias Mixtas:</label>
+      <input type="number" id="mixto" min="0" placeholder="Ingrese días mixtos"><label for="nocturno">Guardias Nocturnas:</label>
+  <input type="number" id="nocturno" min="0" placeholder="Ingrese días nocturnos">
+
+  <label for="libre">Días Libres:</label>
+  <input type="number" id="libre" min="0" placeholder="Ingrese días libres">
+
+  <button onclick="calcularSalario()">Calcular Salario</button>
+</div>
+<button class="btn-limpiar" onclick="limpiarCampos()">Limpiar</button>
+
+<div class="result" id="resultado"></div>
+
+</div><div class="overlay" id="overlay"></div>
+<div class="popup" id="popupMensaje">
+  <h2>Llena los campos</h2>
+  <button onclick="cerrarPopups()">Aceptar</button>
+</div><div class="popup" id="popupExtras">
+  <h2>¿Has realizado guardias extras?</h2>
+  <div class="popup-buttons">
+      <button onclick="guardiaExtras(true)">Sí</button>
+      <button onclick="guardiaExtras(false)">No</button>
+  </div>
+</div><div class="popup" id="popupCantidadExtras">
+  <h2>¿Cuántas guardias extras realizaste?</h2>
+  <input type="number" id="cantidadExtras" min="0" placeholder="Ingrese cantidad">
+  <button onclick="agregarGuardiasExtras()">Aceptar</button>
+</div>
+
+  </body>
+
+  <footer>
+
+  </footer>
+
+</main>
+
+<script src="public/javascript/index.js"></script>
+
+</html>
