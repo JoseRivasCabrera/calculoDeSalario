@@ -3,5 +3,5 @@ function handleCredentialResponse(response) {
   console.log("Usuario autenticado:", data);
   alert(`Bienvenido ${data.name}`);
   // Redirige a la página principal o dashboard
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
