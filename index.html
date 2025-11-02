@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cálculo de salario</title>
   <link rel="stylesheet" href="public/styles/index.css">
+  <link rel="stylesheet" href="public/styles/footer.css">
 </head>
 
 <main>
@@ -34,9 +35,20 @@
         <button onclick="calcularSalario()">Calcular Salario</button>
       </div>
 
+      <div class="result" id="resultado"></div>
+
       <button class="btn-limpiar" onclick="limpiarCampos()">Limpiar</button>
 
-      <div class="result" id="resultado"></div>
+      <div class="footer-bottom">
+        &copy; 2025 RIVASTECH. Todos los derechos reservados.
+        <a href="politica-privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Uso</a>
+        Desarrollado por
+        <a href="https://tusitio.dev" target="_blank" class="rivas--tech">
+          <img src="public/scr/images/rivastech_logo.png" alt="Logo empresa desarrolladora" class="footer-logo-img" />
+          RIVASTECH
+        </a> v2.1
+      </div>
+
     </div>
 
     <div class="overlay" id="overlay"></div>
