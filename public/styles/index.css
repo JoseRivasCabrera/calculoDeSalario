@@ -121,3 +121,123 @@ button:hover {
   background-color: blue;
   transition: 2s;
 }
+
+.tabla-resultado {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.tabla-resultado td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-resultado td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.tabla-resultado td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+.resultado-plantilla .total {
+  font-size: 18px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #0a0a0a;
+  background: #eafbe7;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.tabla-scroll {
+  max-height: 300px; /* lÃ­mite de alto visible */
+  overflow-y: auto; /* scroll vertical */
+  overflow-x: auto; /* scroll horizontal */
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  white-space: nowrap; /* evita que las columnas se rompan en lÃ­nea */
+}
+
+.tabla-resultado {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 👈 hace que los anchos se respeten */
+  font-size: 16px;
+    margin-top: 10px;
+}
+
+.tabla-resultado th,
+.tabla-resultado td {
+  background: #f4f4f4;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #ddd;
+  font-weight: 700;
+}
+
+
+.tabla-resultado td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ajustes de ancho por columna */
+.tabla-resultado th:nth-child(1),
+.tabla-resultado td:nth-child(1) {
+  width: 55%;
+  text-align: left;
+}
+
+.tabla-resultado th:nth-child(2),
+.tabla-resultado td:nth-child(2) {
+  width: 10%;
+  text-align: center;
+}
+
+.tabla-resultado th:nth-child(3),
+.tabla-resultado td:nth-child(3) {
+  width: 5%;
+  text-align: right;
+}
+
+.tabla-resultado th:nth-child(4),
+.tabla-resultado td:nth-child(4) {
+  width: 30%;
+  text-align: right;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+.resultado-plantilla {
+  margin-top: 15px;
+}
+
+.resultado-plantilla .total {
+  font-size: 18px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #0a0a0a;
+  background: #eafbe7;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
