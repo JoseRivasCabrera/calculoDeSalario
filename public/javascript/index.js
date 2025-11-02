@@ -88,10 +88,10 @@ function mostrarResultado() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>Total días trabajados</td><td>${totalDias}</td><td></td><td></td></tr>
-            <tr><td>Horas Ordinarias</td><td>${horasOrdinarias}</td><td>₡</td><td>${formatoMoneda.format(valorHoraDiurna * horasOrdinarias)}</td></tr>
-            <tr><td>Horas extra mixtas</td><td>${horasExtraMixtas}</td><td>₡</td><td>${formatoMoneda.format(valorExtrasMixto)}</td></tr>
-            <tr><td>Horas extra nocturnas</td><td>${horasExtraNocturnas}</td><td>₡</td><td>${formatoMoneda.format(valorExtrasNocturno)}</td></tr>
+            <tr><td>Días trabajados</td><td>${totalDias}</td><td></td><td></td></tr>
+            <tr><td>H.Ordinarias</td><td>${horasOrdinarias}</td><td>₡</td><td>${formatoMoneda.format(valorHoraDiurna * horasOrdinarias)}</td></tr>
+            <tr><td>H.extra mixtas</td><td>${horasExtraMixtas}</td><td>₡</td><td>${formatoMoneda.format(valorExtrasMixto)}</td></tr>
+            <tr><td>H.extra nocturnas</td><td>${horasExtraNocturnas}</td><td>₡</td><td>${formatoMoneda.format(valorExtrasNocturno)}</td></tr>
             <tr><td>Días libres</td><td>${libre}</td><td>₡</td><td>${formatoMoneda.format(subtotalLibre)}</td></tr>
             <tr><td>Rebajos</td><td></td><td></td><td></td></tr>
             <tr><td>CCSS (10,67%)</td><td></td><td>₡</td><td>${formatoMoneda.format(ccss)}</td></tr>

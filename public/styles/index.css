@@ -202,28 +202,22 @@ button:hover {
 
 .tabla-resultado th:nth-child(2),
 .tabla-resultado td:nth-child(2) {
-  width: 10%;
+  width: 8%;
   text-align: center;
 }
 
 .tabla-resultado th:nth-child(3),
 .tabla-resultado td:nth-child(3) {
   width: 5%;
-  text-align: right;
+  text-align: left;
 }
 
 .tabla-resultado th:nth-child(4),
 .tabla-resultado td:nth-child(4) {
-  width: 30%;
+  width: 33%;
   text-align: right;
   font-weight: 600;
 }
-
-
-
-
-
-
 
 .resultado-plantilla {
   margin-top: 15px;
