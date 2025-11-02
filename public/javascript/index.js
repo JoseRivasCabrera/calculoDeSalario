@@ -101,7 +101,7 @@ function mostrarResultado() {
       <hr>
       <div class="fila total">
         <span><strong>Salario libre:</strong></span>
-        <span><strong>₡${formatoMoneda.format(salarioLibreTotal)}</strong></span>
+        <span class='totallibre' ><strong>₡${formatoMoneda.format(salarioLibreTotal)}</strong></span>
       </div>
     </div>`;
 

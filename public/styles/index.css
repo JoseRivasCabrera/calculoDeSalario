@@ -52,7 +52,7 @@ button:hover {
     background-color: #218838;
 }
 .btn-limpiar {
-    background-color: #dc3545;
+    background-color: #d25c68;
 }
 .btn-limpiar:hover {
     background-color: #c82333;
@@ -227,10 +227,15 @@ button:hover {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: bold;
-  color: #0a0a0a;
-  background: #eafbe7;
+  color: #000000;
+  background: #a8e09e;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.totallibre {
+  font-size: 28px;
 }
