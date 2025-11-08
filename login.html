@@ -3,18 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | RIVASTECH</title>
+  <title>Rivas Dev | Iniciar Sesión</title>
   <link rel="stylesheet" href="public/styles/login.css" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
-  <div class="login-container">
-    <div class="login-card">
-      <img src="logo.png" alt="RIVASTECH Logo" class="logo" />
-      <h1>Bienvenido</h1>
-      <p>Inicia sesión para continuar</p>
+  <div class="container" id="cardContainer">
+    <!-- LOGIN -->
+    <div class="card front">
+      <img src="public/scr/images/rivastech_logo.png" alt="Logo Rivas Dev" />
+      <h2>Iniciar Sesión</h2>
 
-      <!-- Configuración del botón de Google -->
+      <div class="input-group">
+        <label>Correo electrónico</label>
+        <input type="email" id="email" placeholder="Tu correo" />
+      </div>
+
+      <div class="input-group">
+        <label>Contraseña</label>
+        <input type="password" id="password" placeholder="Tu contraseña" />
+      </div>
+
+      <a href="#">¿Olvidaste tu contraseña?</a>
+
+      <button class="btn" id="btnLogin">Ingresar</button>
+
+      <!-- LOGIN CON GOOGLE -->
       <div id="g_id_onload"
         data-client_id="358858690615-vmfeph3nr3kq9kquadh92qj8uev72rk0.apps.googleusercontent.com"
         data-context="signin"
@@ -26,10 +40,41 @@
       <div class="g_id_signin"
         data-type="standard"
         data-shape="rectangular"
-        data-theme="filled_blue"
+        data-theme="outline"
         data-text="signin_with"
         data-size="large"
         data-logo_alignment="left">
+      </div>
+
+      <div class="switch">
+        ¿Nuevo aquí? <span onclick="flipCard()">Crear cuenta</span>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="card back">
+      <img src="public/scr/images/rivastech_logo.png" alt="Logo Rivas Dev" />
+      <h2>Crear Cuenta</h2>
+
+      <div class="input-group">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Tu nombre completo" />
+      </div>
+
+      <div class="input-group">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="Tu correo" />
+      </div>
+
+      <div class="input-group">
+        <label>Contraseña</label>
+        <input type="password" placeholder="Crea una contraseña" />
+      </div>
+
+      <button class="btn">Registrarse</button>
+
+      <div class="switch">
+        ¿Ya tienes cuenta? <span onclick="flipCard()">Inicia sesión</span>
       </div>
     </div>
   </div>

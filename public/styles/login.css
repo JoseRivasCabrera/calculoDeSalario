@@ -1,67 +1,143 @@
-/* ======= ESTILOS BASE ======= */
+:root {
+  --primary: #0d9488;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-light: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #1a2229 40%, #13656b);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  overflow: hidden;
+  perspective: 1000px;
 }
 
-/* ======= CONTENEDOR PRINCIPAL ======= */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Contenedor 3D */
+.container {
+  width: 320px;
+  height: 480px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* Tarjetas */
+.card {
+  position: absolute;
   width: 100%;
-}
-
-/* ======= TARJETA DE LOGIN ======= */
-.login-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 3rem 2.5rem;
+  height: 100%;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  width: 350px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.7s ease;
 }
 
-/* ======= LOGO ======= */
-.logo {
-  width: 90px;
-  margin-bottom: 1rem;
+.card img {
+  width: 60px;
+  margin: 0 auto 0.5rem auto;
 }
 
-/* ======= TITULOS ======= */
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
-
-p {
-  color: #d9d9d9;
+.card h2 {
+  font-size: 1.6rem;
   margin-bottom: 1.5rem;
 }
 
-/* ======= BOTÓN GOOGLE ======= */
-.g_id_signin {
-  display: inline-block;
-  margin-top: 1rem;
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
-/* ======= ANIMACIONES ======= */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.input-group label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.input-group input {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  background: #334155;
+  color: var(--text-light);
+}
+
+/* Botones y enlaces */
+.card a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.btn {
+  background: var(--primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.switch span {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Rotación */
+.container.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.back {
+  transform: rotateY(180deg);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    height: 500px;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
 }
